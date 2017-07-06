@@ -12,5 +12,9 @@ namespace RS_Portfolio.Controllers
         {
             return View();
         }
+        public ActionResult Homepage()
+        {
+            return View("Homepage");
+        }
     }
 }

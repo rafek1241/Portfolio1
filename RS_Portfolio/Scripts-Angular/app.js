@@ -23,10 +23,12 @@
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
     }
-    run.$inject = ['$rootScope', '$location'];
-    function run($rootScope, $location) {
+    run.$inject = ['$rootScope', '$location','MenuService'];
+    function run($rootScope, $location, MenuService) {
         $rootScope.title = "Robert Szachnowski - Developer";
         $rootScope.currentUrl = "/";
+        $rootScope.MenuService = MenuService;
+
     }
 
 

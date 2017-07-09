@@ -18241,8 +18241,63 @@ div.e-dlg-field-validation-error:before {
   border-color: #c8c8c8;
 }
 @font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/Open_Sans/OpenSans-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/Open_Sans/OpenSans-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/Open_Sans/OpenSans-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/Open_Sans/OpenSans-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/Open_Sans/OpenSans-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Thin.ttf) format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url(../../fonts/Roboto/Roboto-Black.ttf) format('truetype');
+  font-weight: 900;
+}
+@font-face {
   font-family: 'Portfolio';
-  src: url('~/fonts/Portfolio.ttf') format('truetype'), url('~/fonts/Portfolio.woff') format('woff'), url('~/fonts/Portfolio.eot') format('eot'), url('~/fonts/Portfolio.svg?#Portfolio') format('svg');
+  src: url('../../fonts/Portfolio.ttf') format('truetype'), url('~/fonts/Portfolio.woff') format('woff'), url('~/fonts/Portfolio.eot') format('eot'), url('~/fonts/Portfolio.svg?#Portfolio') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -21070,26 +21125,95 @@ find:before {
 .sf-icon-zoom-vertical---02:before {
   content: "\eaa7";
 }
-.full-page-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+  color: #fff;
+  font-family: 'Open Sans';
+}
+html,
+body {
   width: 100%;
-  position: fixed;
   height: 100%;
 }
-.full-page-header .typewriter h1 {
+h6 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+h5 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+h4 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+h3 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+h2 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+h1 {
+  font-family: Roboto;
+  font-weight: bold;
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 96px;
+  }
+  h2 {
+    font-size: 84px;
+  }
+  h3 {
+    font-size: 72px;
+  }
+  h4 {
+    font-size: 60px;
+  }
+  body,
+  p {
+    font-size: 18px;
+  }
+  .container .row,
+  .container-fluid .row {
+    margin-bottom: 40px;
+  }
+}
+body.homepage {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#09052f+0,311d5e+100 */
+  background: #09052f;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #09052f 0%, #311d5e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #09052f 0%, #311d5e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #09052f 0%, #311d5e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#09052f', endColorstr='#311d5e', GradientType=1);
+  /* IE6-9 */
+}
+body.homepage .body-content {
+  background-image: url(../../Resources/Homepage_background.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  animation: animatedBackground 60s linear infinite;
+}
+body.homepage .body-content .headline-row {
+  display: flex;
+  justify-content: center;
+}
+body.homepage .body-content .headline-row .typewriter > * {
+  float: left;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
+  border-right: 4px solid #fff;
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
+  letter-spacing: .05em;
   /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 1.5s steps(20, end), blink-caret 1s step-end infinite;
 }
 /* The typing effect */
 @keyframes typing {
@@ -21107,8 +21231,68 @@ find:before {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: #fff;
   }
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 bottom;
+  }
+  to {
+    background-position: 100% bottom;
+  }
+}
+.header-logo {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  padding-top: 2px;
+  padding-right: 10px;
+}
+#navbar-header {
+  background-color: transparent;
+  border-color: transparent;
+  padding-top: 25px;
+}
+#navbar-header > .container {
+  display: flex;
+  justify-content: center;
+}
+#navbar-header ul {
+  text-transform: uppercase;
+}
+#navbar-header ul li.active a {
+  background: transparent;
+}
+.body-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.body-content .container-table {
+  display: table;
+}
+.body-content .vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+.btn {
+  font-family: 'Open Sans';
+}
+.btn.btn-primary {
+  background: transparent;
+  border-radius: 0;
+  border-width: 2px;
+  font-weight: bold;
+  border-color: #fff;
+  transition: ease .4s all;
+}
+.btn.btn-primary:hover {
+  background: #fff;
+  color: #413d4b;
+}
+.btn.btn-primary:hover:active {
+  border-color: #413d4b;
 }
 .pt-5 {
   padding-top: 5;
@@ -21183,4 +21367,7 @@ find:before {
 .flex-middle {
   display: flex;
   align-items: center;
+}
+.font-light {
+  font-weight: 300;
 }

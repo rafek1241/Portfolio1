@@ -494,12 +494,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Open_Sans\LICENSE.txt" />
     <Content Include="fonts\Portfolio.svg" />
+    <Content Include="fonts\Roboto\LICENSE.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Partials\Index.html" />
+    <Content Include="Partials\About-me.html" />
+    <Content Include="Partials\Homepage.html" />
+    <Content Include="Resources\Homepage_background.png" />
     <Content Include="Scripts-Angular\app.js" />
-    <Content Include="Scripts-Angular\controllers\IndexController.js" />
+    <Content Include="Scripts-Angular\controllers\AboutController.js" />
+    <Content Include="Scripts-Angular\controllers\HomepageController.js" />
     <Content Include="Scripts-Angular\services\MenuService.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -1391,6 +1396,28 @@
     <Content Include="fonts\Portfolio.woff" />
     <Content Include="Assets\package.json" />
     <Content Include="Assets\MyLayout\Helpers.less" />
+    <Content Include="fonts\Open_Sans\OpenSans-Bold.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-BoldItalic.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-ExtraBold.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-Italic.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-Light.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-LightItalic.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-Regular.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-SemiBold.ttf" />
+    <Content Include="fonts\Open_Sans\OpenSans-SemiBoldItalic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Italic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="fonts\Roboto\Roboto-LightItalic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="fonts\Roboto\Roboto-Thin.ttf" />
+    <Content Include="fonts\Roboto\Roboto-ThinItalic.ttf" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -1414,11 +1441,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Shared\_Menu.cshtml" />
-    <Content Include="Views\Shared\_Homepage.cshtml" />
-    <Content Include="Views\Home\Homepage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1427,7 +1452,6 @@
     <Folder Include="Controllers\OdataControllers\" />
     <Folder Include="Models\Mappers\" />
     <Folder Include="Models\Validators\" />
-    <Folder Include="Resources\" />
     <Folder Include="Scripts-Angular\directives\" />
   </ItemGroup>
   <ItemGroup>

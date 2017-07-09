@@ -1,4 +1,4 @@
-﻿<div class="navbar navbar-inverse navbar-fixed-top">
+﻿<div id="navbar-header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -6,11 +6,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Nazwa aplikacji", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Nazwa aplikacji", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            <div class="header-logo">Robert Szachnowski</div>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li ng-repeat="menu in MenuService.menu"><a ng-href="#">{{menu.plName}}</a></li>
+                <li ng-repeat="menu in MenuService.menu" ng-class="MenuService.selectedIndex === menu.id ? 'active' : ''"><a ng-href="{{menu.url}}">{{menu.enName}}</a></li>
             </ul>
         </div>
     </div>

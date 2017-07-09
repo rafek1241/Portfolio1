@@ -1,7 +1,7 @@
 ﻿
 (function () {
     'use strict'
-    angular.module('app', ['ngRoute', /*'ejangular'*/])
+    angular.module('app', ['ngRoute'])
         .config(config)
         .run(run);
 
@@ -24,7 +24,7 @@
                 }
             })
             .when('/about-me', {
-                templateUrl: 'Partials/about-me.html',
+                templateUrl: 'Partials/About-me.html',
                 controller: 'AboutController',
                 controllerAs: 'vm',
                 resolve: {
@@ -50,7 +50,7 @@
         $rootScope.chooseBodyClass = function () {
             switch ($rootScope.bodyClass) {
                 case 1:
-                    return "homepage";
+                    return "homepage dark";
                     break;
                 case 2:
                     return "about-me";

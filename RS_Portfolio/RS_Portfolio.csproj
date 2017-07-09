@@ -501,7 +501,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="Partials\About-me.html" />
     <Content Include="Partials\Homepage.html" />
+    <Content Include="Resources\about-me-skills-bg.png" />
+    <Content Include="Resources\angularjs_logo.png" />
+    <Content Include="Resources\dotnet_logo.png" />
     <Content Include="Resources\Homepage_background.png" />
+    <Content Include="Resources\html5_logo.png" />
+    <Content Include="Resources\JavaScript_02-1.png" />
+    <Content Include="Resources\Java_logo-1.png" />
+    <Content Include="Resources\logo_net_380x215.jpg" />
+    <Content Include="Resources\MySQL.png" />
+    <Content Include="Resources\photoshop_logo.png" />
+    <Content Include="Resources\SpringBoot_02.png" />
     <Content Include="Scripts-Angular\app.js" />
     <Content Include="Scripts-Angular\controllers\AboutController.js" />
     <Content Include="Scripts-Angular\controllers\HomepageController.js" />
@@ -534,7 +544,6 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\ej.widget.angular.min.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-touch.min.js.map" />

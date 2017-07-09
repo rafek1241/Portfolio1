@@ -19,7 +19,6 @@ namespace RS_Portfolio
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-cookies.js",
                 "~/Scripts/i18n/angular-locale_pl-pl.js",
-                "~/Scripts/ej.web.all.min.js",
                 "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(

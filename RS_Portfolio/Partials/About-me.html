@@ -1,1 +1,81 @@
-﻿
+﻿<section id="about-me" class="container-fluid light">
+    <div class="container">
+        <div class="row headline">
+            <h1><span>About me</span></h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+            </div>
+            <div class="col-lg-8">
+                <p>
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                </p>
+                <p>
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                    Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                </p>
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+                Save reverie for pangs mine that break many and thence ways in to he strength was bidding from fabled not
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="my-skills" class="container-fluid dark dark-bg">
+    <div class="container">
+        <div class="row headline text-center">
+            <h1>My Skills</h1>
+            <span>Hover on interesting tile</span>
+        </div>
+        <div class="row tiles">
+            <div class="col-lg-3 tile" ng-repeat="skill in vm.skills">
+                <div class="relative-pos">
+                    <div class="card__front">
+                        <div class=" heading-icon">
+                            <img class="img-responsive" ng-src="{{skill.logo}}" />
+                        </div>
+                        <p class=" title-with-descr">
+                            {{skill.name}}
+                            <span class="descr" ng-show="skill.descr">{{skill.descr}}</span>
+                        </p>
+                    </div>
+                    <div class="card__back" ng-mouseenter="vm.flippedSkill=skill.id" ng-mouseleave="vm.flippedSkill = null">
+                        <div class="box" ng-cloak ng-if="skill.id === vm.flippedSkill">
+                            <div class='wave -one' style="top: {{(100-skill.level)+10}}%;"></div>
+                        </div>
+
+                        <p class="descr" style="color:#000" ng-cloak ng-if="skill.id === vm.flippedSkill">
+                            {{skill.level}}%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

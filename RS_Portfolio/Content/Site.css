@@ -21126,8 +21126,35 @@ find:before {
   content: "\eaa7";
 }
 * {
-  color: #fff;
   font-family: 'Open Sans';
+}
+.dark {
+  color: #fff;
+}
+.dark.dark-bg {
+  background: #1e1248;
+}
+.dark .headline > h1 {
+  position: relative;
+}
+.dark .headline > h1 span {
+  position: relative;
+  padding: 0 15px;
+  z-index: 1;
+}
+.light {
+  color: #413d4b;
+}
+.light.light-bg {
+  background: #fff;
+}
+.light .headline > h1 {
+  position: relative;
+}
+.light .headline > h1 span {
+  position: relative;
+  padding: 0 15px;
+  z-index: 1;
 }
 html,
 body {
@@ -21136,47 +21163,47 @@ body {
 }
 h6 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 h5 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 h4 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 h3 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 h2 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 h1 {
   font-family: Roboto;
-  font-weight: bold;
+  font-weight: 300;
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: 96px;
+    font-size: 48px;
   }
   h2 {
-    font-size: 84px;
+    font-size: 40px;
   }
   h3 {
-    font-size: 72px;
+    font-size: 36px;
   }
   h4 {
-    font-size: 60px;
+    font-size: 28px;
   }
   body,
   p {
     font-size: 18px;
   }
-  .container .row,
-  .container-fluid .row {
+  .container > .row,
+  .container-fluid > .row {
     margin-bottom: 40px;
   }
 }
@@ -21215,6 +21242,11 @@ body.homepage .body-content .headline-row .typewriter > * {
   /* Adjust as needed */
   animation: typing 1.5s steps(20, end), blink-caret 1s step-end infinite;
 }
+body.homepage .body-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 /* The typing effect */
 @keyframes typing {
   from {
@@ -21242,6 +21274,44 @@ body.homepage .body-content .headline-row .typewriter > * {
     background-position: 100% bottom;
   }
 }
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+.btn {
+  font-family: 'Open Sans';
+  border-radius: 0;
+  border-width: 2px;
+  font-weight: bold;
+  transition: ease .4s all;
+}
+.btn.btn-primary {
+  background: transparent;
+  border-color: #fff;
+}
+.btn.btn-primary:hover {
+  background: #fff;
+  color: #413d4b;
+}
+.btn.btn-primary:hover:active {
+  border-color: #413d4b;
+}
+.btn.btn-secondary {
+  background: #fff;
+  border-color: #413d4b;
+  color: #413d4b;
+}
+.btn.btn-secondary:hover {
+  background: #1e1248;
+  color: #fff;
+}
+.btn.btn-secondary:hover:active {
+  border-color: #fff;
+}
 .header-logo {
   font-family: 'Kaushan Script', cursive;
   font-size: 30px;
@@ -21252,6 +21322,7 @@ body.homepage .body-content .headline-row .typewriter > * {
   background-color: transparent;
   border-color: transparent;
   padding-top: 25px;
+  color: #fff;
 }
 #navbar-header > .container {
   display: flex;
@@ -21264,9 +21335,6 @@ body.homepage .body-content .headline-row .typewriter > * {
   background: transparent;
 }
 .body-content {
-  position: relative;
-  display: flex;
-  align-items: center;
   height: 100%;
 }
 .body-content .container-table {
@@ -21276,23 +21344,164 @@ body.homepage .body-content .headline-row .typewriter > * {
   display: table-cell;
   vertical-align: middle;
 }
-.btn {
-  font-family: 'Open Sans';
+body:not(.homepage) #navbar-header {
+  background: #1e1248;
 }
-.btn.btn-primary {
-  background: transparent;
-  border-radius: 0;
-  border-width: 2px;
+body:not(.homepage) .body-content {
+  padding-top: 76px;
+}
+#my-skills {
+  /*.tiles > *{
+    }
+    .square-tile{
+        float:left;
+        width:150px;
+        height:150px;
+        border:2px solid @white;
+        span{
+            font-family:Roboto;
+
+        }
+    }*/
+  background: url('../../Resources/about-me-skills-bg.png'), #1e1248;
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: 100%;
+}
+#my-skills .tiles {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+#my-skills .tiles .tile {
+  font-family: Roboto;
+  margin-top: 30px;
+  float: left;
+}
+#my-skills .tiles .tile card__front,
+#my-skills .tiles .tile .card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#my-skills .tiles .tile .card__front,
+#my-skills .tiles .tile .card__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+#my-skills .tiles .tile .card__front {
+  background-color: transparent;
+}
+#my-skills .tiles .tile .card__back {
+  background-color: #fff;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+#my-skills .tiles .tile .card__back .svg-bg {
+  height: 100%;
+  width: 100%;
+}
+#my-skills .tiles .tile .card__back .box {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  background: #fbfcee;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+#my-skills .tiles .tile .card__back .wave {
+  opacity: .4;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -50px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+#my-skills .tiles .tile .card__back .box:after {
+  content: '';
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 0%, rgba(255, 255, 255, 0.5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+#my-skills .tiles .tile .card__back .title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-indent: .3em;
+}
+#my-skills .tiles .tile .card__back .descr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  top: -100%;
+  font-family: Roboto;
   font-weight: bold;
-  border-color: #fff;
-  transition: ease .4s all;
+  text-transform: uppercase;
+  font-size: 38px;
 }
-.btn.btn-primary:hover {
-  background: #fff;
-  color: #413d4b;
+#my-skills .tiles .tile:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-.btn.btn-primary:hover:active {
-  border-color: #413d4b;
+#my-skills .tiles .tile:hover .card__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+#my-skills .tiles .tile .heading-icon {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #fff;
+  align-items: center;
+}
+#my-skills .tiles .tile .heading-icon img {
+  max-height: 200px;
+}
+#my-skills .tiles .tile .title-with-descr {
+  margin-bottom: 0;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-top-width: 0px;
+  padding: 10px;
+}
+#my-skills .tiles .tile .title-with-descr span {
+  display: block;
+  font-size: small;
+  font-weight: 300;
+  color: #fafafa;
+}
+.about-me section,
+.about-me #navbar-header {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
 .pt-5 {
   padding-top: 5;
@@ -21370,4 +21579,7 @@ body.homepage .body-content .headline-row .typewriter > * {
 }
 .font-light {
   font-weight: 300;
+}
+.relative-pos {
+  position: relative;
 }
